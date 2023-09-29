@@ -1,0 +1,40 @@
+//手机端
+@media (max-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 5vh;
+    width: 100%;
+  }
+}
+//Web端
+@media (min-width: 800px) {
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 45rem;
+    width: 70rem;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.35);
+    display: flex;
+    overflow: hidden;
+
+    .left {
+      background-image: url('./assets/image/bg1.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      flex: 1;
+    }
+
+    .main {
+      background-color: rgba(137, 43, 226, 0.459);
+      flex: 3;
+    }
+  }
+
+}

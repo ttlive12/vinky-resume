@@ -1,0 +1,135 @@
+.introduction-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: auto;
+
+  .sub-item{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+
+    .title{
+      position: absolute;
+      top: 1.5rem;
+    }
+
+    .userinfo{
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 15%;
+
+      .item{
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin-top: 1rem;
+
+        .label{
+          color: rgba(0,0,0,0.5);
+          font-size: 1.2rem;
+        }
+
+        .value{
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .school{
+      display: flex;   
+      align-items: center;
+
+      .info{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        .school-title{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 0.4rem;
+        }
+      }
+    }
+  }
+}
+
+//手机端
+@media (max-width: 800px) {
+  .introduction-container{
+    width: 100%;
+    height: 100%;
+
+    .sub-item{
+      padding-top: 3rem;
+
+      .title{
+        left: 1.5rem;
+        font-size: 1.5rem;
+      }
+
+      .userinfo{
+        width: 100%;
+      }
+
+      .school{
+        margin-top: 1rem;
+
+        .neu{
+          width: 80px;
+          height: 80px;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+//Web端
+@media (min-width: 800px) {
+  .introduction-container{
+    width: 80%;
+    height: 100%;
+
+    .sub-item{
+      padding-top: 5rem;
+
+      .title{
+        left: 2rem;
+        font-size: 1.65rem;
+      }
+
+      .userinfo{
+        width: 80%;
+      }
+
+      .school{
+
+        .neu{
+          width: 180px;
+          height: 180px;
+        }
+
+        .info{
+
+          margin-left: 2.5rem;
+
+          .school-title{
+            font-size: 1.4rem;
+            margin-bottom: 2rem; 
+            flex-wrap : wrap; 
+          }
+        }
+      }
+    }
+  }  
+}

@@ -1,0 +1,89 @@
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  
+  .tabbar {
+    display: flex;
+    background-color: #f8e9e9;
+    .now{
+      color: aliceblue;
+      background-color: #9147ff;
+    }
+    .tabbar-item{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.4s;
+      .tabbar-icon{
+        font-size: 1.6rem;
+        margin-bottom: 0.2rem;
+      }
+      .tabbar-name{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 580;
+      }
+    }
+  }
+  .show {
+    flex: 1;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+//手机端
+@media (max-width: 800px) {
+  .main-container {
+    flex-direction: column;
+  
+    .tabbar {
+      
+      margin-top: 1rem;
+      width: 100%;
+      justify-content: space-around;
+      overflow: hidden;
+      border-radius: 1rem;
+
+      .tabbar-item{
+        width: 6rem;
+        padding: 0.5rem 0;
+        border-radius: 1rem;
+
+        .tabbar-name{
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+//Web端
+@media (min-width: 800px) {
+  .main-container {
+  
+    .tabbar {
+      width: 6rem;
+      overflow: auto;
+
+      flex-direction: column;
+      justify-content: space-around;
+
+      .nonow:hover{
+        color: aliceblue;
+        background-color: #9147ff80;
+      }
+
+      .tabbar-item{
+        padding: 1.2rem 0;
+        border-radius: 0.2rem;
+
+        .tabbar-name{
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
