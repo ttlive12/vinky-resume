@@ -20,6 +20,7 @@ import {
 import TextArea from 'antd/es/input/TextArea';
 import React, { useEffect, useRef, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { useMediaQuery } from 'react-responsive';
 import { getChatContent } from '../../../api/chat';
 import Loading from '../../../assets/gif/loading.gif';
 import Logo from '../../../assets/image/logo.png';
@@ -48,6 +49,8 @@ const ChatGPT: React.FC = () => {
   const [inputValue, setInputValue] = useState('');
 
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const isMobile = useMediaQuery({ query: ' (max-device-width: 800px)' });
 
   const deleteHistory = (index: number) => {
     setChatHistory(chatHistory.filter((_item, idx) => idx !== index));
@@ -304,9 +307,12 @@ const ChatGPT: React.FC = () => {
                   {Delete(index)}
                 </div>
               )}
-              <ReactMarkdown components={{ code: CodeBlock as any }}>
-                {chat.content}
-              </ReactMarkdown>
+              {isMobile && <ReactMarkdown>{chat.content}</ReactMarkdown>}
+              {!isMobile && (
+                <ReactMarkdown components={{ code: CodeBlock as any }}>
+                  {chat.content}
+                </ReactMarkdown>
+              )}
             </div>
           </div>
         ))}
