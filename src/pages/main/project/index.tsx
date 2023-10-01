@@ -27,7 +27,7 @@ const tranTimeLineItem = ({ title, tags, description, features }: TimeLineItemTy
       </div>
       <span style={{ color: 'rgba(0,0,0,0.5)' }}>{description}</span>
       <ul>
-        {features.map((feature) => <li>{feature}</li>)}
+        {features.map((feature,index) => <li key={index}>{feature}</li>)}
       </ul>
     </div>
   }

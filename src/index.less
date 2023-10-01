@@ -1,3 +1,10 @@
+.hidden{
+  opacity: 0;
+  width: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out, width 1s ease-in-out;
+}
+
 //手机端
 @media (max-width: 800px) {
   .container {
@@ -6,6 +13,9 @@
     align-items: center;
     justify-content: flex-start;
     padding-top: 5vh;
+    width: 100%;
+  }
+  .left {
     width: 100%;
   }
 }
@@ -23,18 +33,17 @@
     box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.35);
     display: flex;
     overflow: hidden;
-
     .left {
       background-image: url('./assets/image/bg1.png');
       background-repeat: no-repeat;
       background-size: cover;
-      flex: 1;
+      opacity: 1;
+      width: 20rem;
+      transition: opacity 1s ease-in-out, width 1s ease-in-out;
     }
-
     .main {
-      background-color: rgba(137, 43, 226, 0.459);
-      flex: 3;
+      flex: 1;
+      transition: opacity 1s ease-in-out, width 1s ease-in-out;
     }
   }
-
 }

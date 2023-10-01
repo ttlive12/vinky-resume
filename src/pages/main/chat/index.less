@@ -1,0 +1,119 @@
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  height: 20%;
+}
+
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Optional: for semi-transparent background */
+}
+
+.keep-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.1rem;
+  width: 100%;
+
+  .name {
+    width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+
+.chat-container {
+  padding: 1rem;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-height: 80vh;
+  transform: rotate(0);
+
+  .title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .tip {
+      position: absolute;
+      right: -18%;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+
+  .chat-box {
+    margin-top: 1rem;
+    position: relative;
+    width: 100%;
+    height: 80%;
+    border-radius: 1rem;
+    border: 0.02rem solid rgba(0, 0, 0, 0.4);
+    overflow: auto;
+    padding: 1rem 1.5rem;
+    box-sizing: border-box;
+    transition: all 1s ease-in-out;
+
+    .head-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .img {
+      width: 1.4rem;
+      height: 1.4rem;
+      margin-right: 0.4rem;
+    }
+  }
+
+  .input-box {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .ant-input,
+    .ant-btn {
+      border-color: rgba(0, 0, 0, 0.4) !important;
+    }
+
+    .send {
+      margin: 0 1rem;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .chat-container {
+    height: 50vh;
+  }
+}

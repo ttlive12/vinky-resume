@@ -27,7 +27,7 @@ const Sketch: React.FC = () => {
       />
     </div>
     <span className='title'>Vinky</span>
-    <Typewriter texts={["一个热爱技术的前端工程师",'一个善于学习新技术的学生']} />
+    <Typewriter texts={["一个热爱技术的前端工程师", '一个善于学习新技术的学生']} />
     <div className="contact-list">
       {contactShowList.map((item: ContactShowType, index) => <div className='icon-container' key={index} onClick={() => {
         if (!!item.url) {

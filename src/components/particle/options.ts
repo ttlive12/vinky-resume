@@ -36,7 +36,7 @@ export const options: ISourceOptions = {
             },
         },
         opacity: {
-            value: 0.5,
+            value: 0.35,
         },
         size: {
             value: {

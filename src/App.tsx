@@ -1,31 +1,23 @@
 import Main from './pages/main'
 import ParticlesComponet from './components/particle/particle'
 import Sketch from "./pages/sketch"
-import { useMediaQuery } from 'react-responsive';
+
 import "./index.less"
+import { useState } from 'react'
 
 const App: React.FC = () => {
-  const isMobile = useMediaQuery({ query: " (max-device-width: 800px)" });
-  const isDesktop = useMediaQuery({ query: " (min-device-width: 800px)" });
 
+  const [closed, setClosed] = useState(false)
   return <>
     <ParticlesComponet />
-    {
-      isDesktop && <div className="container animate__animated animate__zoomIn">
-        <div className="left">
-          <Sketch />
-        </div>
-        <div className="main">
-          <Main />
-        </div>
+    <div className="container animate__animated animate__zoomIn">
+      <div className={`${closed ? 'hidden' : 'left'}`}>
+        <Sketch />
       </div>
-    }
-    {
-      isMobile && <div className="container animate__animated animate__zoomIn">
-          <Sketch />
-          <Main />
+      <div className="main">
+        <Main closed={closed} setClosed={setClosed} />
       </div>
-    }
+    </div>
   </>
 }
 export default App

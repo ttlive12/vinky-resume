@@ -8,15 +8,15 @@ interface TimeLineItemType {
   features: string[];
 }
 
-const tranTimeLineItem = ({ title, description, features }: TimeLineItemType) => {
+const tranTimeLineItem = ({ title, description, features }: TimeLineItemType,index:number) => {
   return {
-    children: <div className='animate__animated animate__fadeIn'>
+    children: <div className='animate__animated animate__fadeIn' key={index}>
       <div style={{ fontFamily: 'serif', fontSize: '1.15rem', display: 'flex' }}>
         <span> {title}</span>
       </div>
       <span style={{ color: 'rgba(155, 89, 182,0.65)' }}>{description}</span>
       <ul>
-        {features.map((feature) => <li>{feature}</li>)}
+        {features.map((feature,index) => <li key={index}>{feature}</li>)}
       </ul>
     </div>
   }
@@ -39,7 +39,7 @@ const Work: React.FC = () => {
     <Timeline
       className='timeline'
       mode="left"
-      items={timeLineItems.map(item => tranTimeLineItem(item))}
+      items={timeLineItems.map((item,index) => tranTimeLineItem(item,index))}
     />
   </div>
 }
