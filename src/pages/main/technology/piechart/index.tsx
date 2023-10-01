@@ -4,7 +4,7 @@ type DataType = {
   type: string;
   value: number;
   color: string;
-}
+};
 
 interface PieChartType {
   data: DataType[];
@@ -12,7 +12,7 @@ interface PieChartType {
 }
 
 export const PieChart: React.FC<PieChartType> = ({ data, title }) => {
-  const colors = data.map(d => d.color);
+  const colors = data.map((d) => d.color);
   const config = {
     appendPadding: 10,
     data,

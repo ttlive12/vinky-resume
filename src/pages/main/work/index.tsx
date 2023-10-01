@@ -1,6 +1,5 @@
-import { Timeline } from 'antd'
-import './index.less'
-
+import { Timeline } from 'antd';
+import './index.less';
 
 interface TimeLineItemType {
   title: string;
@@ -8,19 +7,28 @@ interface TimeLineItemType {
   features: string[];
 }
 
-const tranTimeLineItem = ({ title, description, features }: TimeLineItemType,index:number) => {
+const tranTimeLineItem = (
+  { title, description, features }: TimeLineItemType,
+  index: number,
+) => {
   return {
-    children: <div className='animate__animated animate__fadeIn' key={index}>
-      <div style={{ fontFamily: 'serif', fontSize: '1.15rem', display: 'flex' }}>
-        <span> {title}</span>
+    children: (
+      <div className="animate__animated animate__fadeIn" key={index}>
+        <div
+          style={{ fontFamily: 'serif', fontSize: '1.15rem', display: 'flex' }}
+        >
+          <span> {title}</span>
+        </div>
+        <span style={{ color: 'rgba(155, 89, 182,0.65)' }}>{description}</span>
+        <ul>
+          {features.map((feature, index) => (
+            <li key={index}>{feature}</li>
+          ))}
+        </ul>
       </div>
-      <span style={{ color: 'rgba(155, 89, 182,0.65)' }}>{description}</span>
-      <ul>
-        {features.map((feature,index) => <li key={index}>{feature}</li>)}
-      </ul>
-    </div>
-  }
-}
+    ),
+  };
+};
 
 const timeLineItems: TimeLineItemType[] = [
   {
@@ -28,19 +36,23 @@ const timeLineItems: TimeLineItemType[] = [
     description: '职位：前端工程师 2023.05-至今',
     features: [
       '前端多个项目开发',
-      '包括CCPC报名系统，河北省大学生创新创业年会系统，东秦闪送系统和东秦教代会提案系统'
-    ]
+      '包括CCPC报名系统，河北省大学生创新创业年会系统，东秦闪送系统和东秦教代会提案系统',
+    ],
   },
-]
+];
 
 const Work: React.FC = () => {
-  return <div className="work-container">
-    <div className="title">实习经历</div>
-    <Timeline
-      className='timeline'
-      mode="left"
-      items={timeLineItems.map((item,index) => tranTimeLineItem(item,index))}
-    />
-  </div>
-}
-export default Work
+  return (
+    <div className="work-container">
+      <div className="title">实习经历</div>
+      <Timeline
+        className="timeline"
+        mode="left"
+        items={timeLineItems.map((item, index) =>
+          tranTimeLineItem(item, index),
+        )}
+      />
+    </div>
+  );
+};
+export default Work;

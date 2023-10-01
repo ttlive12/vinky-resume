@@ -1,11 +1,11 @@
-.introduction-container{
+.introduction-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   overflow: auto;
 
-  .sub-item{
+  .sub-item {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -13,17 +13,17 @@
     font-family: 'Times New Roman', Times, serif;
     position: relative;
 
-    .title{
+    .title {
       position: absolute;
       top: 1.5rem;
     }
 
-    .userinfo{
+    .userinfo {
       display: flex;
       flex-wrap: wrap;
       padding-left: 15%;
 
-      .item{
+      .item {
         flex-basis: 50%;
         display: flex;
         flex-direction: column;
@@ -31,28 +31,28 @@
         align-items: flex-start;
         margin-top: 1rem;
 
-        .label{
-          color: rgba(0,0,0,0.5);
+        .label {
+          color: rgba(0, 0, 0, 0.5);
           font-size: 1.2rem;
         }
 
-        .value{
+        .value {
           font-size: 1.5rem;
         }
       }
     }
 
-    .school{
-      display: flex;   
+    .school {
+      display: flex;
       align-items: center;
 
-      .info{
+      .info {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
 
-        .school-title{
+        .school-title {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -65,26 +65,26 @@
 
 //手机端
 @media (max-width: 800px) {
-  .introduction-container{
+  .introduction-container {
     width: 100%;
     height: 100%;
 
-    .sub-item{
+    .sub-item {
       padding-top: 3rem;
 
-      .title{
+      .title {
         left: 1.5rem;
         font-size: 1.5rem;
       }
 
-      .userinfo{
+      .userinfo {
         width: 100%;
       }
 
-      .school{
+      .school {
         margin-top: 1rem;
 
-        .neu{
+        .neu {
           width: 80px;
           height: 80px;
           margin-right: 0.5rem;
@@ -96,40 +96,38 @@
 
 //Web端
 @media (min-width: 800px) {
-  .introduction-container{
+  .introduction-container {
     width: 80%;
     height: 100%;
 
-    .sub-item{
+    .sub-item {
       padding-top: 5rem;
 
-      .title{
+      .title {
         left: 2rem;
         font-size: 1.65rem;
       }
 
-      .userinfo{
+      .userinfo {
         width: 80%;
       }
 
-      .school{
-
-        .neu{
+      .school {
+        .neu {
           width: 180px;
           height: 180px;
         }
 
-        .info{
-
+        .info {
           margin-left: 2.5rem;
 
-          .school-title{
+          .school-title {
             font-size: 1.4rem;
-            margin-bottom: 2rem; 
-            flex-wrap : wrap; 
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
           }
         }
       }
     }
-  }  
+  }
 }

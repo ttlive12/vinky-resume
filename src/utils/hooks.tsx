@@ -1,10 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-export function useCache<T>(key: string, initialValue: T, storage: ('local' | 'session') = 'local'): [T, (value: T) => void] {
+export function useCache<T>(
+  key: string,
+  initialValue: T,
+  storage: 'local' | 'session' = 'local',
+): [T, (value: T) => void] {
   // 获取初始值
   const readValue = (): T => {
     if (!!key) {
-      const item = storage === 'local' ? window.localStorage.getItem(key) : window.sessionStorage.getItem(key);
+      const item =
+        storage === 'local'
+          ? window.localStorage.getItem(key)
+          : window.sessionStorage.getItem(key);
       if (item) {
         return JSON.parse(item);
       }
@@ -23,7 +30,9 @@ export function useCache<T>(key: string, initialValue: T, storage: ('local' | 's
 
     // 保存到Storage
     if (!!value) {
-      storage === 'local' ? window.localStorage.setItem(key, JSON.stringify(value)) : window.sessionStorage.setItem(key, JSON.stringify(value))
+      storage === 'local'
+        ? window.localStorage.setItem(key, JSON.stringify(value))
+        : window.sessionStorage.setItem(key, JSON.stringify(value));
     }
   };
 

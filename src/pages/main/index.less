@@ -2,24 +2,24 @@
   width: 100%;
   height: 100%;
   display: flex;
-  
+
   .tabbar {
     display: flex;
     background-color: #f8e9e9;
-    .now{
+    .now {
       color: aliceblue;
       background-color: #9147ff;
     }
-    .tabbar-item{
+    .tabbar-item {
       display: flex;
       flex-direction: column;
       align-items: center;
       transition: all 0.4s;
-      .tabbar-icon{
+      .tabbar-icon {
         font-size: 1.6rem;
         margin-bottom: 0.2rem;
       }
-      .tabbar-name{
+      .tabbar-name {
         font-family: 'Times New Roman', Times, serif;
         font-weight: 580;
       }
@@ -27,7 +27,7 @@
   }
   .show {
     flex: 1;
-    background-color: rgba(255,255,255,0.85);
+    background-color: rgba(255, 255, 255, 0.85);
     border-radius: 1rem;
     display: flex;
     align-items: center;
@@ -46,11 +46,11 @@
       overflow: hidden;
       border-radius: 1rem;
 
-      .tabbar-item{
+      .tabbar-item {
         width: 4rem;
         padding: 0.5rem 0;
         border-radius: 1rem;
-        .tabbar-name{
+        .tabbar-name {
           font-size: 0.6rem;
         }
       }
@@ -61,7 +61,6 @@
 //Web端
 @media (min-width: 800px) {
   .main-container {
-  
     .tabbar {
       width: 6rem;
       overflow: auto;
@@ -69,16 +68,16 @@
       flex-direction: column;
       justify-content: space-around;
 
-      .nonow:hover{
+      .nonow:hover {
         color: aliceblue;
         background-color: #9147ff80;
       }
 
-      .tabbar-item{
+      .tabbar-item {
         padding: 1.2rem 0;
         border-radius: 0.2rem;
 
-        .tabbar-name{
+        .tabbar-name {
           font-size: 1.2rem;
         }
       }
