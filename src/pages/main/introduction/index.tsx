@@ -69,7 +69,13 @@ const Introduction: React.FC = () => {
             <Space direction="vertical">
               <span>就读情况：大二在读</span>
               <span>专业：计算机科学与技术</span>
-              <span>荣誉：两学期均获得奖学金</span>
+              <span>
+                身份：NEUQ-ACM俱乐部第十届副会长，不洗碗工作室前端开发
+              </span>
+              <span>成绩：综测专业第三名</span>
+              <span>
+                获奖赛事：RoboCom-CAIP国赛，团体程序设计天梯赛吗，CCPC省赛，蓝桥杯等
+              </span>
             </Space>
           </div>
         </div>
